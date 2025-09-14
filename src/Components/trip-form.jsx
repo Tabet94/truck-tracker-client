@@ -25,7 +25,7 @@ import * as Yup from "yup"
 import { useMutation, useQueryClient } from "@tanstack/react-query"
 import tripService from "../Services/tripService"
 import { LuMapPin, LuClock, LuUser, LuTruck } from "react-icons/lu"
-import truck from '../assets/truck.jpg'
+
 
 const TripForm = () => {
   const queryClient = useQueryClient()

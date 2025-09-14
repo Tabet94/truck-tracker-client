@@ -11,6 +11,7 @@ const tripService = {
             return response.data;
         }catch(error){
             console.error("Error creating trip", error);
+             throw error;
         }
     },
 

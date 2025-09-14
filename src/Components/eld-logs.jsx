@@ -26,7 +26,7 @@ const EldLogs = ({ logs }) => {
     <Card bg="white" shadow="lg" borderRadius="xl" border="1px" borderColor="gray.200">
       <CardHeader bg="purple" borderTopRadius="xl" py={4}>
         <HStack spacing={3}>
-          <Icon as={FiClock} color="blue.500" boxSize={6} />
+          <Icon as={FiClock} color="white" boxSize={6} />
           <VStack align="start" spacing={0}>
             <Heading size="lg" color="white" fontWeight="bold">
               ELD Logs
