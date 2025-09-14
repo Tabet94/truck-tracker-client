@@ -15,6 +15,7 @@ import {
 } from "@chakra-ui/react"
 import TripForm from "../Components/trip-form"
 import { LuLogs, LuUser, LuTruck } from "react-icons/lu"
+import AllTrips from "../Components/trips-list"
 
 const Home = () => {
   return (
@@ -104,6 +105,7 @@ const Home = () => {
                 <Box p={4} bg="gray.50" borderRadius="md" textAlign="center" color="gray.600">
                   Access your driving logs and compliance history
                 </Box>
+                <AllTrips />
               </VStack>
             </TabPanel>
           </TabPanels>

@@ -7,11 +7,34 @@ const tripService = {
         try{
             const response = await api.post(API_ENDPOINTS.TRIPS, tripData);
             console.log("trip created", tripData);
-             console.log("Trip route distance (km):", data.route.distance_km);
-  console.log("Current location coords:", data.current_location.latitude, data.current_location.longitude);
-            return response.tripdata;
+    
+            return response.data;
         }catch(error){
             console.error("Error creating trip", error);
+        }
+    },
+
+     getAll: async () => {
+        try {
+            const response = await api.get(API_ENDPOINTS.TRIPS)
+            console.log("All trips", response);
+            return response;
+        }catch (error){
+             console.error('Error fetching a Trip:', error);
+            throw error;
+
+        }
+    },
+
+    getById: async (id) => {
+        try {
+            const response = await api.get(`${API_ENDPOINTS.TRIPS}${id}`)
+            console.log("trip by Id", response);
+            return response;
+        }catch (error){
+             console.error('Error fetching a Trip:', error);
+            throw error;
+
         }
     }
 }

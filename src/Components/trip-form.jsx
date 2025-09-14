@@ -313,15 +313,6 @@ const TripForm = () => {
           </Card>
         </Box>
       </Flex>
-
-      <Flex flex={1}>
-        <Image
-          alt="Truck"
-          objectFit="cover"
-          src={truck}
-          borderRadius={{ base: "none", md: "lg" }}
-        />
-      </Flex>
     </Stack>
   )
 }
