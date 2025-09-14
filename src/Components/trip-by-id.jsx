@@ -93,7 +93,7 @@ const TripById = () => {
             <AlertDescription maxWidth="sm">
               We couldn't load the trip details. Please check the trip ID and try again.
             </AlertDescription>
-            <Button as={RouterLink} to="/trips" mt={4} colorScheme="blue" leftIcon={<Icon as={FiArrowLeft} />}>
+            <Button as={RouterLink} to="/" mt={4} colorScheme="blue" leftIcon={<Icon as={FiArrowLeft} />}>
               Back to Trips
             </Button>
           </Alert>

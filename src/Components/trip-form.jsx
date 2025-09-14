@@ -293,7 +293,7 @@ const TripForm = () => {
                           type="submit"
                           bgColor="purple"
                           color="white"
-                          size="lg"
+                          size={{base:"md", lg:"lg"}}
                           width="full"
                           leftIcon={<LuTruck />}
                           isLoading={createTripMutation.isLoading}
