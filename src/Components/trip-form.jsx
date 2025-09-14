@@ -31,28 +31,28 @@ const TripForm = () => {
   const queryClient = useQueryClient()
   const toast = useToast()
 
-  const createTripMutation = useMutation({
-    mutationFn: tripService.create,
-    onSuccess: () => {
-      toast({
-        title: "Trip created successfully!",
-        status: "success",
-        duration: 5000,
-        isClosable: true,
-      })
-      queryClient.invalidateQueries({ queryKey: ["trips"] })
-    },
-    onError: (error) => {
-      toast({
-        title: "Error creating trip.",
-        description: error.message,
-        status: "error",
-        duration: 5000,
-        isClosable: true,
-      })
-      console.error("Error creating trip:", error)
-    },
-  })
+ const createTripMutation = useMutation({
+  mutationFn: tripService.create,
+  onSuccess: () => {
+    toast({
+      title: "Trip created successfully!",
+      status: "success",
+      duration: 5000,
+      isClosable: true,
+    })
+    queryClient.invalidateQueries({ queryKey: ["trips"] })
+  },
+  onError: (error) => {
+    toast({
+      title: "Error creating trip",
+      description: error?.response?.data?.detail || error.message,
+      status: "error",
+      duration: 5000,
+      isClosable: true,
+    })
+    console.error("Error creating trip:", error)
+  },
+})
 
   const TripSchema = Yup.object().shape({
     driver_name: Yup.string().required("Driver name is required"),
@@ -63,11 +63,14 @@ const TripForm = () => {
     start_date: Yup.date().required("Departure date is required"),
   })
 
-  const handleSubmit = (values, { setSubmitting, resetForm }) => {
-    createTripMutation.mutate(values)
-    setSubmitting(false)
-    resetForm()
-  }
+const handleSubmit = (values, { resetForm }) => {
+  createTripMutation.mutate(values, {
+    onSuccess: () => {
+      resetForm(); 
+    },
+  })
+}
+
 
   return (
     <Stack minH="100vh" direction={{ base: "column", md: "row" }} bg="gray.50">
@@ -293,10 +296,10 @@ const TripForm = () => {
                           type="submit"
                           bgColor="purple"
                           color="white"
-                          size={{base:"md", lg:"lg"}}
+                          size={{ base: "md", lg: "lg" }}
                           width="full"
                           leftIcon={<LuTruck />}
-                          isLoading={createTripMutation.isLoading}
+                          isLoading={createTripMutation.isPending}  
                           loadingText="Creating Trip..."
                           _hover={{
                             transform: "translateY(-1px)",
@@ -305,6 +308,7 @@ const TripForm = () => {
                         >
                           Create Delivery Trip
                         </Button>
+
                       </Box>
                     </VStack>
                   </Form>
