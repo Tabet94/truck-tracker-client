@@ -75,7 +75,7 @@ const TripForm = () => {
         <Box w="full" maxW="2xl">
           <VStack spacing={6} mb={8} align="start">
             <HStack spacing={3}>
-              <Box p={2} bg="blue.500" borderRadius="md">
+              <Box p={2} bg="purple" borderRadius="md">
                 <LuTruck size={24} color="white" />
               </Box>
               <VStack align="start" spacing={1}>
@@ -83,8 +83,8 @@ const TripForm = () => {
                   Create New Delivery Trip
                 </Heading>
                 <HStack>
-                  <Badge colorScheme="blue" variant="subtle">
-                    Professional Driver Portal
+                  <Badge colorScheme="purple" variant="subtle">
+                    Driver Portal
                   </Badge>
                 </HStack>
               </VStack>
@@ -110,7 +110,7 @@ const TripForm = () => {
                     <VStack spacing={8} align="stretch">
                       <Box>
                         <HStack spacing={2} mb={4}>
-                          <LuUser size={20} color="#3182CE" />
+                          <LuUser size={20} color="purple" />
                           <Text fontSize="lg" fontWeight="semibold" color="gray.700">
                             Driver Information
                           </Text>
@@ -129,10 +129,10 @@ const TripForm = () => {
                             borderColor="gray.300"
                             size="lg"
                             _focus={{
-                              bg: "white",
-                              borderColor: "blue.500",
-                              boxShadow: "0 0 0 1px #3182CE",
-                            }}
+                                  bg: "white",
+                                  borderColor: "purple.700",
+                                  boxShadow: "0 0 0 1px purple",
+                                }}
                           />
                           <FormErrorMessage>{errors.driver_name}</FormErrorMessage>
                         </FormControl>
@@ -142,7 +142,7 @@ const TripForm = () => {
 
                       <Box>
                         <HStack spacing={2} mb={4}>
-                          <LuMapPin size={20} color="#3182CE" />
+                          <LuMapPin size={20} color="purple" />
                           <Text fontSize="lg" fontWeight="semibold" color="gray.700">
                             Route Information
                           </Text>
@@ -165,10 +165,10 @@ const TripForm = () => {
                                 border="1px solid"
                                 borderColor="gray.300"
                                 size="lg"
-                                _focus={{
+                               _focus={{
                                   bg: "white",
-                                  borderColor: "blue.500",
-                                  boxShadow: "0 0 0 1px #3182CE",
+                                  borderColor: "purple.700",
+                                  boxShadow: "0 0 0 1px purple",
                                 }}
                               />
                               <FormErrorMessage>{errors.current_location_input}</FormErrorMessage>
@@ -193,8 +193,8 @@ const TripForm = () => {
                                 size="lg"
                                 _focus={{
                                   bg: "white",
-                                  borderColor: "blue.500",
-                                  boxShadow: "0 0 0 1px #3182CE",
+                                  borderColor: "purple.700",
+                                  boxShadow: "0 0 0 1px purple",
                                 }}
                               />
                               <FormErrorMessage>{errors.pickup_location_input}</FormErrorMessage>
@@ -218,11 +218,11 @@ const TripForm = () => {
                               border="1px solid"
                               borderColor="gray.300"
                               size="lg"
-                              _focus={{
-                                bg: "white",
-                                borderColor: "blue.500",
-                                boxShadow: "0 0 0 1px #3182CE",
-                              }}
+                             _focus={{
+                                  bg: "white",
+                                  borderColor: "purple.700",
+                                  boxShadow: "0 0 0 1px purple",
+                                }}
                             />
                             <FormErrorMessage>{errors.dropoff_location_input}</FormErrorMessage>
                           </FormControl>
@@ -233,7 +233,7 @@ const TripForm = () => {
 
                       <Box>
                         <HStack spacing={2} mb={4}>
-                          <LuClock size={20} color="#3182CE" />
+                          <LuClock size={20} color="purple" />
                           <Text fontSize="lg" fontWeight="semibold" color="gray.700">
                             Schedule Details
                           </Text>
@@ -253,10 +253,10 @@ const TripForm = () => {
                                 border="1px solid"
                                 borderColor="gray.300"
                                 size="lg"
-                                _focus={{
+                               _focus={{
                                   bg: "white",
-                                  borderColor: "blue.500",
-                                  boxShadow: "0 0 0 1px #3182CE",
+                                  borderColor: "purple.700",
+                                  boxShadow: "0 0 0 1px purple",
                                 }}
                               />
                               <FormErrorMessage>{errors.cycle_hours_used}</FormErrorMessage>
@@ -278,8 +278,8 @@ const TripForm = () => {
                                 size="lg"
                                 _focus={{
                                   bg: "white",
-                                  borderColor: "blue.500",
-                                  boxShadow: "0 0 0 1px #3182CE",
+                                  borderColor: "purple.700",
+                                  boxShadow: "0 0 0 1px purple",
                                 }}
                               />
                               <FormErrorMessage>{errors.start_date}</FormErrorMessage>
@@ -291,7 +291,8 @@ const TripForm = () => {
                       <Box pt={4}>
                         <Button
                           type="submit"
-                          colorScheme="blue"
+                          bgColor="purple"
+                          color="white"
                           size="lg"
                           width="full"
                           leftIcon={<LuTruck />}

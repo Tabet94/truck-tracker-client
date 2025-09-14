@@ -16,8 +16,9 @@ const tripService = {
 
      getAll: async () => {
         try {
-            const response = await api.get(API_ENDPOINTS.TRIPS)
-            console.log("All trips", response);
+            const response = await api.get(API_ENDPOINTS.TRIPS);
+            console.log("Full response", response);
+
             return response;
         }catch (error){
              console.error('Error fetching a Trip:', error);
@@ -29,7 +30,8 @@ const tripService = {
     getById: async (id) => {
         try {
             const response = await api.get(`${API_ENDPOINTS.TRIPS}${id}`)
-            console.log("trip by Id", response);
+             console.log("Full API response:", response);  
+        console.log("ELD logs:", response);  
             return response;
         }catch (error){
              console.error('Error fetching a Trip:', error);

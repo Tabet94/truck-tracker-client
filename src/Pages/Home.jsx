@@ -22,17 +22,15 @@ const Home = () => {
     <Container maxW="6xl" py={8}>
       <VStack spacing={6} align="stretch">
         {/* Header Section */}
-        <Box bg="blue.50" p={6} borderRadius="lg" borderLeft="4px solid" borderLeftColor="blue.500">
+        <Box bg="purple" p={6} borderRadius="lg" borderLeft="4px solid" borderLeftColor="blue.800">
           <HStack spacing={3} mb={2}>
-            <LuTruck size={24} color="#3182CE" />
-            <Heading size="lg" color="blue.700">
+            <LuTruck size={24} color="white" />
+            <Heading size="lg" color="white">
               Driver Dashboard
             </Heading>
-            <Badge colorScheme="blue" variant="subtle">
-              Professional
-            </Badge>
+            
           </HStack>
-          <Text color="gray.700" fontSize="md">
+          <Text color="white" fontSize="md">
             Manage your routes, track deliveries, and maintain compliance records
           </Text>
         </Box>
@@ -53,9 +51,9 @@ const Home = () => {
             <Tab
               fontWeight="semibold"
               _selected={{
-                bg: "blue.500",
+                bg: "blue.800",
                 color: "white",
-                borderColor: "blue.500",
+                borderColor: "black",
               }}
             >
               <HStack spacing={2}>
@@ -66,9 +64,9 @@ const Home = () => {
             <Tab
               fontWeight="semibold"
               _selected={{
-                bg: "blue.500",
+                bg: "blue.800",
                 color: "white",
-                borderColor: "blue.500",
+                borderColor: "black",
               }}
             >
               <HStack spacing={2}>
@@ -101,9 +99,6 @@ const Home = () => {
                   <Text color="gray.600" fontSize="sm" mb={4}>
                     View and manage your driving hours and compliance records
                   </Text>
-                </Box>
-                <Box p={4} bg="gray.50" borderRadius="md" textAlign="center" color="gray.600">
-                  Access your driving logs and compliance history
                 </Box>
                 <AllTrips />
               </VStack>
