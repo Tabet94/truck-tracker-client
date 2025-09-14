@@ -141,11 +141,11 @@ const TripById = () => {
         {trip && (
           <VStack spacing={6} align="stretch">
             {/* Trip Overview Card */}
-            <Card bgColor="blue.800" shadow="lg" borderRadius="xl">
+            <Card shadow="none" border="none" >
               <CardHeader>
                 <HStack>
-                  <Icon as={FiMapPin} color="white" boxSize={5} />
-                  <Heading size="md" color="white">
+                  <Icon as={FiMapPin} color="purple" boxSize={5} />
+                  <Heading size="md" color="black">
                     Trip Overview
                   </Heading>
                 </HStack>
@@ -154,42 +154,42 @@ const TripById = () => {
                 <HStack spacing={8} wrap="wrap">
                   {trip.current_location?.name && (
                     <VStack align="start" spacing={1}>
-                      <Text fontSize="sm" color="gray.400" fontWeight="medium">
+                      <Text fontSize="sm" color="gray.600" fontWeight="medium">
                         Current Position
                       </Text>
-                      <Text fontSize="lg" fontWeight="bold" color="white">
+                      <Text fontSize="lg" fontWeight="bold" color="black">
                         {trip.current_location?.name}
                       </Text>
                     </VStack>
                   )}
                   {trip.pickup_location?.name && (
                     <VStack align="start" spacing={1}>
-                      <Text fontSize="sm" color="gray.400" fontWeight="medium">
+                      <Text fontSize="sm" color="gray.600" fontWeight="medium">
                         Pickup Location
                       </Text>
-                      <Text fontSize="lg" fontWeight="bold" color="white">
+                      <Text fontSize="lg" fontWeight="bold" color="black">
                         {trip.pickup_location?.name}
                       </Text>
                     </VStack>
                   )}
                   {trip.dropoff_location?.name && (
                     <VStack align="start" spacing={1}>
-                      <Text fontSize="sm" color="gray.400" fontWeight="medium">
+                      <Text fontSize="sm" color="gray.600" fontWeight="medium">
                         Drop-off Location
                       </Text>
-                      <Text fontSize="lg" fontWeight="bold" color="white">
+                      <Text fontSize="lg" fontWeight="bold" color="black">
                         {trip.dropoff_location?.name}
                       </Text>
                     </VStack>
                   )}
                   {trip.start_date && (
                     <VStack align="start" spacing={1}>
-                      <Text fontSize="sm" color="gray.400" fontWeight="medium">
+                      <Text fontSize="sm" color="gray.600" fontWeight="medium">
                         Start Date
                       </Text>
                       <HStack>
-                        <Icon as={FiClock} color="white"/>
-                        <Text fontSize="lg" fontWeight="bold" color="white">
+                        <Icon as={FiClock} color="black"/>
+                        <Text fontSize="lg" fontWeight="bold" color="black">
                           {new Date(trip.start_date).toLocaleString()}
                         </Text>
                       </HStack>
@@ -200,7 +200,7 @@ const TripById = () => {
             </Card>
 
             {/* Map Section */}
-            <Card  shadow="lg" borderRadius="xl">
+            <Card  shadow="none" border="none">
               <CardHeader>
                 <HStack>
                   <Icon as={FaRoute} color="purple" boxSize={5} />
@@ -217,7 +217,7 @@ const TripById = () => {
             </Card>
 
             {/* ELD Logs Section */}
-            <Card shadow="lg" borderRadius="xl">
+            <Card shadow="none" border="none">
               <CardHeader>
                 
               </CardHeader>

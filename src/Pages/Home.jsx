@@ -22,7 +22,7 @@ const Home = () => {
     <Container maxW="6xl" py={8}>
       <VStack spacing={6} align="stretch">
         {/* Header Section */}
-        <Box bg="purple" p={6} borderRadius="lg" borderLeft="4px solid" borderLeftColor="blue.800">
+        <Box bg="purple" p={6} borderRadius="lg">
           <HStack spacing={3} mb={2}>
             <LuTruck size={24} color="white" />
             <Heading size="lg" color="white">
@@ -35,25 +35,22 @@ const Home = () => {
           </Text>
         </Box>
 
-        <Divider />
+      
 
         {/* Main Content Tabs */}
         <Tabs
           variant="enclosed"
           colorScheme="blue"
           bg="white"
-          borderRadius="lg"
-          boxShadow="sm"
-          border="1px solid"
-          borderColor="gray.200"
+        
         >
-          <TabList bg="gray.50" borderTopRadius="lg" borderBottom="1px solid" borderBottomColor="gray.200">
+          <TabList  borderTopRadius="lg" borderBottom="1px solid" borderBottomColor="gray.200">
             <Tab
               fontWeight="semibold"
               _selected={{
-                bg: "blue.800",
+                bg: "purple",
                 color: "white",
-                borderColor: "black",
+                
               }}
             >
               <HStack spacing={2}>
@@ -64,9 +61,9 @@ const Home = () => {
             <Tab
               fontWeight="semibold"
               _selected={{
-                bg: "blue.800",
+                bg: "purple",
                 color: "white",
-                borderColor: "black",
+               
               }}
             >
               <HStack spacing={2}>
@@ -77,7 +74,7 @@ const Home = () => {
           </TabList>
 
           <TabPanels>
-            <TabPanel p={6}>
+            <TabPanel>
               <VStack spacing={4} align="stretch">
                 <Box>
                   <Heading size="md" color="gray.700" mb={2}>

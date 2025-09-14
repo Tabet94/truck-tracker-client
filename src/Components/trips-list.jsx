@@ -74,19 +74,7 @@ const AllTrips = () => {
 
   return (
     <Box p={6} maxW="1400px" mx="auto">
-      <Box
-        bg="blue.800"
-        p={6}
-        borderRadius="lg"
-        mb={6}
-      >
-        <VStack spacing={4} align="stretch">
-          <Heading size="lg" color="white">
-            Trip Management
-          </Heading>
-          <Text color="white">Manage and track all your trips</Text>
-        </VStack>
-      </Box>
+      
 
       {tripsData?.length > 0 ? (
         <Grid

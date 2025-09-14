@@ -73,9 +73,9 @@ const handleSubmit = (values, { resetForm }) => {
 
 
   return (
-    <Stack minH="100vh" direction={{ base: "column", md: "row" }} bg="gray.50">
-      <Flex p={8} flex={1} align="center" justify="center">
-        <Box w="full" maxW="2xl">
+    <Stack minH="100vh" direction={{ base: "column", md: "row" }}>
+      <Flex  flex={1} align="center" justify="center">
+        <Box w="full" maxW="5xl">
           <VStack spacing={6} mb={8} align="start">
             <HStack spacing={3}>
               <Box p={2} bg="purple" borderRadius="md">
@@ -86,15 +86,13 @@ const handleSubmit = (values, { resetForm }) => {
                   Create New Delivery Trip
                 </Heading>
                 <HStack>
-                  <Badge colorScheme="purple" variant="subtle">
-                    Driver Portal
-                  </Badge>
+                  
                 </HStack>
               </VStack>
             </HStack>
           </VStack>
 
-          <Card shadow="lg" border="1px solid" borderColor="gray.200">
+          <Card shadow="none" border="none">
             <CardBody p={8}>
               <Formik
                 initialValues={{
@@ -114,7 +112,7 @@ const handleSubmit = (values, { resetForm }) => {
                       <Box>
                         <HStack spacing={2} mb={4}>
                           <LuUser size={20} color="purple" />
-                          <Text fontSize="lg" fontWeight="semibold" color="gray.700">
+                          <Text fontSize="lg" fontWeight="bold" color="black">
                             Driver Information
                           </Text>
                         </HStack>
@@ -146,7 +144,7 @@ const handleSubmit = (values, { resetForm }) => {
                       <Box>
                         <HStack spacing={2} mb={4}>
                           <LuMapPin size={20} color="purple" />
-                          <Text fontSize="lg" fontWeight="semibold" color="gray.700">
+                          <Text fontSize="lg" fontWeight="bold" color="black">
                             Route Information
                           </Text>
                         </HStack>
@@ -237,7 +235,7 @@ const handleSubmit = (values, { resetForm }) => {
                       <Box>
                         <HStack spacing={2} mb={4}>
                           <LuClock size={20} color="purple" />
-                          <Text fontSize="lg" fontWeight="semibold" color="gray.700">
+                          <Text fontSize="lg"fontWeight="bold" color="black">
                             Schedule Details
                           </Text>
                         </HStack>

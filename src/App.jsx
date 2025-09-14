@@ -3,6 +3,7 @@ import Home from "./Pages/Home";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import TripById from "./Components/trip-by-id";
 import "leaflet/dist/leaflet.css";
+import "@fontsource/inter/400.css"
 
 
 function App() {
